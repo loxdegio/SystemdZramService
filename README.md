@@ -1,4 +1,4 @@
-# zram for Fedora
+# zram for Fedora 19 
 
 __zram__ compresses swap partitions into RAM for performance.
 
