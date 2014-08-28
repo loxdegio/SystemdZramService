@@ -1,22 +1,9 @@
-# zram for Fedora 19 
+# zram for systemd
 
 __zram__ compresses swap partitions into RAM for performance.
 
-You need Linux kernel version 2.6.37.1 or better to use 
+You need Linux kernel version 2.6.37.1+ to use 
 __zram__.
-
-### Automated Install
-
-First you have to setup your rpm build environment. For details see
-[How to create an RPM package - Preparing your system](http://fedoraproject.org/wiki/How_to_create_an_RPM_package#Preparing_your_system).
-
-    # Short version of the howto
-    sudo yum install @development-tools fedora-packager
-    rpmdev-setuptree
-
-    # the real thing(tm)
-    make rpm
-    sudo rpm -Uhv ~/rpmbuild/RPMS/noarch/zram-*.noarch.rpm
 
 ### Manual Install
 
