@@ -7,7 +7,7 @@ __zram__.
 
 ### Manual Install
 
-There are 4 files you need to enable __zram__ for __Fedora__. They
+There are 4 files you need to enable __zram__ for __systemd__. They
 are:
 
 * __zramstart__
