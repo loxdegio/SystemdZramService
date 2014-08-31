@@ -10,7 +10,9 @@ install:
 	install -d $(PREFIX)/sbin
 	install -m 0755 zramstart $(PREFIX)/sbin
 	install -m 0755 zramstop $(PREFIX)/sbin
-	install -m 0755 zramstat $(PREFIX)/sbin
+	
+	install -d $(PREFIX)/bin
+	install -m 0755 zramstat $(PREFIX)/bin
 
 	install -d $(SYSTEMD_UNITDIR)
 	install -m 0644 zram.service $(SYSTEMD_UNITDIR)
