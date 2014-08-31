@@ -8,9 +8,9 @@ target: zram zramstart zramstat zramstop zram.service
 
 install:
 	
-	if [ -f /etc/gentoo-release ];then
-		PREFIX = $(install_prefix)usr
-		SYSCONFDIR = $(install_prefix)etc/sysconfig
+	if [ -f /etc/gentoo-release ];then \
+		PREFIX = $(install_prefix)usr \
+		SYSCONFDIR = $(install_prefix)etc/sysconfig \
 	fi
 	
 	install -c -d $(PREFIX)
