@@ -1,6 +1,6 @@
 PREFIX = /usr
 SYSTEMD_UNITDIR = $(PREFIX)/lib/systemd/system
-SYSCONFDIR ?= $(install_prefix)/etc/sysconfig
+SYSCONFDIR ?= /etc/sysconfig
 VERSION=1.0.0
 SRC_FILES=Makefile README.md zram zram.service zram.spec zramstart zramstat zramstop
 
@@ -9,7 +9,8 @@ target: zram zramstart zramstat zramstop zram.service
 install:
 	
 	if [ -f /etc/gentoo-release ];then
-		PREFIX = $(install_prefix)/usr
+		PREFIX = $(install_prefix)usr
+		SYSCONFDIR = $(install_prefix)etc/sysconfig
 	fi
 	
 	install -c -d $(PREFIX)
@@ -26,6 +27,6 @@ install:
 	install -c -d $(SYSTEMD_UNITDIR)
 	install -c -m 0644 zram.service $(SYSTEMD_UNITDIR)
 
-	install -c -d $(install_prefix)/etc
+	install -c -d $(install_prefix)etc
 	install -c -d $(SYSCONFDIR)
 	install -c -m 0644 zram $(SYSCONFDIR)
