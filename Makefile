@@ -1,7 +1,7 @@
 DESTDIR = /
 USR = $(DESTDIR)usr
 ETC = $(DESTDIR)etc
-LIB = $(USR)lib
+LIB = $(USR)/lib
 SYSTEMD_UNITDIR = $(LIB)/systemd/system
 SYSCONFDIR = $(ETC)/sysconfig
 VERSION=1.0.0
