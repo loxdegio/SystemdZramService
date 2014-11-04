@@ -2,6 +2,7 @@ DESTDIR = /
 USR = $(DESTDIR)usr
 ETC = $(DESTDIR)etc
 LIB = $(USR)/lib
+SBIN = $(DESTDIR)sbin
 SYSTEMD_UNITDIR = $(LIB)/systemd/system
 SYSCONFDIR = $(ETC)/sysconfig
 VERSION=1.0.0
@@ -11,9 +12,9 @@ target: zram zramstart zramstat zramstop zram.service
 
 install:
 	install -c -d $(USR)
-	install -c -d $(USR)/sbin
-	install -c -m 0755 zramstart $(USR)/sbin
-	install -c -m 0755 zramstop $(USR)/sbin	
+	install -c -d $(SBIN)
+	install -c -m 0755 zramstart $(SBIN)
+	install -c -m 0755 zramstop $(SBIN)
 	install -c -d $(USR)/bin
 	install -c -m 0755 zramstat $(USR)/bin
 	install -c -d $(LIB)
